@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bs-body-color: #171717;
+  --bs-body-bg: #FAFAFA;
+  --bs-primary: #DC3735;
+  --bs-font-sans-serif: 'Poppins', sans-serif;
+
+  --color-neutral-50: #FAFAFA;
+  --color-neutral-100: #F5F5F5;
+  --color-neutral-200: #E5E5E5;
+  --color-neutral-600: #404040;
+  --color-black-700: #363435;
+
+  --color-red-100: #FDE8E8;
+  --color-red-600: #DC3735;
+  --color-red-700: #B5302F;
+
+  --color-amber-100: #FEF3C7;
+  --color-amber-800: #92400E;
+
+  --color-green-100: #DCFCE7;
+  --color-green-800: #166534;
+
+  --logo-gradiente: linear-gradient(to right, var(--color-black-700), var(--color-red-600));
+
+  /* 80px */
+  --header-height: 5.0rem;
+}
+
+.app-container {
+  padding-top: var(--header-height);
+}
+
+/* Components */
+.btn {
+  --bs-btn-border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.btn .icon {
+  font-size: 1.5rem;
+}
+
+.btn-outline {
+  --bs-btn-border-color: var(--color-black-700);
+  --bs-btn-color: var(--color-black-700);
+  --bs-btn-hover-bg: var(--color-black-700);
+  --bs-btn-hover-color: var(--color-neutral-50);
+}
+
+.btn-gradiente {
+  --bs-btn-border-width: 0;
+  background: var(--logo-gradiente);
+  color: var(--color-neutral-50);
+}
+
+/* Header */
+.header {
+  padding: 1.125rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--color-neutral-50);
+}
