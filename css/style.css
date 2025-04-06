@@ -36,6 +36,11 @@
 
   /* 80px */
   --header-height: 5.0rem;
+  --app-navbar-height: 5.125rem;
+}
+
+body {
+  height: 100vh;
 }
 
 a {
@@ -45,6 +50,8 @@ a {
 
 .app-container {
   padding-top: var(--header-height);
+  padding-bottom: var(--app-navbar-height);
+  height: 100%;
 }
 
 /* Components */
@@ -194,6 +201,43 @@ a {
 
 .app-main-container {
   padding-top: 2rem;
+  height: 100%;
+}
+
+/* App Navbar */
+.app-navbar {
+  background-color: var(--color-red-600);
+  color: var(--color-neutral-50);
+  padding-top: 0.75rem;
+  padding-bottom: 1.5rem;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.app-navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-navbar .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.app-navbar .nav-link i {
+  font-size: 1.5rem;
+}
+
+.app-navbar .nav-link span {
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
 /* Seção Pedidos de Doação */

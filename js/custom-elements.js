@@ -142,6 +142,36 @@ class PedidoDoacaoCard extends HTMLElement {
   }
 }
 
+class NavBar extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <div class="app-navbar">
+        <nav class="container">
+          <a href="/" class="nav-link">
+            <i class="ph-fill ph-house"></i>
+            <span>Home</span>
+          </a>
+
+          <a href="/pedidos.html" class="nav-link">
+            <i class="ph ph-hand-heart"></i>
+            <span>Pedidos</span>
+          </a>
+
+          <a href="/comunidade.html" class="nav-link">
+            <i class="ph ph-users-three"></i>
+            <span>Comunidade</span>
+          </a>
+
+          <a href="/pedidos.html" class="nav-link">
+            <i class="ph ph-map-trifold"></i>
+            <span>Onde doar</span>
+          </a>
+        </nav>
+      </div>
+`
+  }
+}
 
 window.customElements.define('app-header', Header)
+window.customElements.define('app-navbar', NavBar)
 window.customElements.define('pedido-doacao-card', PedidoDoacaoCard)
