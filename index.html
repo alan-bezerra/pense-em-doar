@@ -37,11 +37,92 @@
       crossorigin="anonymous"
       defer
     ></script>
-    <script defer src="./js/custom-elements.js" type="module"></script>
+    <script defer src="./js/custom-elements.js"></script>
   </head>
   <body>
     <div class="app-container">
       <app-header></app-header>
+
+      <main class="d-flex app-main-container flex-column gap-5">
+        <section id="pedidos-doacao" class="d-flex container flex-column gap-4">
+          <header
+            class="d-flex justify-content-between gap-2 align-items-center"
+          >
+            <h2 class="h2-title">Pedidos de Doação</h2>
+
+            <a href="/pedidos.html" class="sm-link flex-shrink-0">
+              Ver todos <i class="ph ph-caret-right"></i>
+            </a>
+          </header>
+
+          <div
+            id="carouselPedidosDoacaoCards"
+            data-bs-ride="carousel"
+            class="carousel slide pb-5"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselPedidosDoacaoCards"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselPedidosDoacaoCards"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselPedidosDoacaoCards"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <pedido-doacao-card
+                  data-sangue-principal="O+"
+                  data-paciente="Maria S."
+                  data-endereco="Hospital Santa Clara"
+                  data-uf="PB"
+                  data-cidade="Campina Grande"
+                  data-precisa-ate="10/04/2025"
+                  data-sangues="O+, A+, AB, O-, A-"
+                  data-nivel="urgente"
+                ></pedido-doacao-card>
+              </div>
+              <div class="carousel-item">
+                <pedido-doacao-card
+                  data-sangue-principal="A+"
+                  data-paciente="João das Neves"
+                  data-endereco="Hospital Muralha"
+                  data-uf="PB"
+                  data-cidade="João Pessoa"
+                  data-sangues="AB, O-"
+                  data-nivel="medio"
+                ></pedido-doacao-card>
+              </div>
+              <div class="carousel-item">
+                <pedido-doacao-card
+                  data-sangue-principal="AB"
+                  data-paciente="Maria S."
+                  data-endereco="Hospital Santa Clara"
+                  data-uf="PB"
+                  data-cidade="Campina Grande"
+                  data-precisa-ate="10/04/2025"
+                  data-sangues="O+, O-, A+"
+                  data-nivel="baixo"
+                ></pedido-doacao-card>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   </body>
 </html>
