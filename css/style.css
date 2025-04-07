@@ -53,8 +53,6 @@ a {
 }
 
 .app-container {
-  padding-top: var(--header-height);
-  padding-bottom: var(--app-navbar-height);
   height: 100%;
 }
 
@@ -231,6 +229,9 @@ a {
 .app-main-container {
   padding-top: 2rem;
   height: 100%;
+  overflow: auto;
+  padding-top: calc(var(--header-height) + 2rem);
+  padding-bottom: calc(var(--app-navbar-height) + 2rem);
 }
 
 /* App Navbar */
