@@ -18,11 +18,15 @@
   --color-neutral-100: #F5F5F5;
   --color-neutral-200: #E5E5E5;
   --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
   --color-neutral-600: #404040;
   --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
   --color-black-700: #363435;
 
   --color-red-100: #FDE8E8;
+  --color-red-200: #F9BEBE;
   --color-red-600: #DC3735;
   --color-red-700: #B5302F;
 
@@ -56,7 +60,7 @@ a {
 
 /* Components */
 .container {
-  --bs-gutter-x: 3rem;
+  --bs-gutter-x: 2rem;
 }
 
 .btn {
@@ -103,7 +107,11 @@ a {
 }
 
 .carousel-indicators {
-  --bs-carousel-indicator-active-bg: var(--color-black-700);
+  --bs-carousel-indicator-active-bg: var(--color-neutral-400);
+}
+
+.carousel-indicators .active {
+  --bs-carousel-indicator-active-bg: var(--color-red-600);
 }
 
 .badge {
@@ -130,7 +138,34 @@ a {
   color: var(--color-green-800);
 }
 
+.avatar-card {
+  width: var(--avatar-size, 2.625rem);
+  height: var(--avatar-size, 2.625rem);
+  border-radius: 99999px;
+  overflow: hidden;
+
+  display: grid;
+  place-content: center;
+  background-color: var(--color-neutral-200);
+  font-size: 0.875rem;
+}
+
+.avatar-placeholder {
+  text-transform: uppercase;
+}
+
+.card-icon-text {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 /* Pedido Doação Card */
+.pedido-card {
+  background-color: var(--color-white);
+  border-color: var(--color-neutral-300);
+}
+
 .pedido-card .card-body {
   display: flex;
   flex-direction: column;
@@ -164,12 +199,6 @@ a {
   margin-top: 0.25rem;
 }
 
-.pedido-card .card-icon-text {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
 .pedido-card .card-text {
   margin: 0;
   font-size: 0.875rem;
@@ -191,7 +220,7 @@ a {
 
 /* Header */
 .header {
-  padding: 1.125rem 1.5rem;
+  padding: 1.125rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -238,10 +267,4 @@ a {
 .app-navbar .nav-link span {
   font-size: 0.75rem;
   font-weight: 500;
-}
-
-/* Seção Pedidos de Doação */
-.pedido-card {
-  background-color: var(--color-white);
-  border-color: var(--color-neutral-300);
 }
