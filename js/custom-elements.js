@@ -1,7 +1,7 @@
 class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <div class="border-bottom position-fixed top-0 z-3 end-0 start-0">
+      <div class="border-bottom header-container position-fixed top-0 z-3 end-0 start-0">
         <header class="container header">
           <a href="/">
             <img src="./assets/imgs/logo.svg" alt="Logo Pense em Doar" />
@@ -291,7 +291,18 @@ class ComunidadeDoacaoCard extends HTMLElement {
   }
 }
 
+class VoltarBtn extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <a title="Voltar" aria-label="Voltar" href="javascript:history.back()" class="btn p-0">
+        <i class="ph ph-arrow-left icon"></i>
+      </a>
+    `
+  }
+}
+
 window.customElements.define('app-header', Header)
 window.customElements.define('app-navbar', NavBar)
 window.customElements.define('pedido-doacao-card', PedidoDoacaoCard)
 window.customElements.define('comunidade-post-card', ComunidadeDoacaoCard)
+window.customElements.define('voltar-btn', VoltarBtn)
