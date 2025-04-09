@@ -273,3 +273,20 @@ a {
   font-weight: 500;
   white-space: nowrap;
 }
+
+/* Barra de pesquisa da página Pedidos */
+.pedidos__pesquisar {
+  display: flex;
+  justify-content: center;
+}
+
+.pedidos__pesquisar fieldset {
+  width: 100%;
+}
+
+.pedidos__pesquisar input {
+  width: 100%;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid var(--color-neutral-300);
+}
