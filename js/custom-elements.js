@@ -1,5 +1,7 @@
 class Header extends HTMLElement {
   connectedCallback() {
+    const active = this.dataset.active // home, pedidos, comunidade, onde-doar
+
     this.innerHTML = `
       <div class="border-bottom header-container position-fixed top-0 z-3 end-0 start-0">
         <header class="container header">
@@ -7,13 +9,37 @@ class Header extends HTMLElement {
             <img src="./assets/imgs/logo.svg" alt="Logo Pense em Doar" />
           </a>
 
-          <a class="btn btn-outline" href="/contato.html">
-            <i class="ph ph-envelope-simple icon"></i>
-            Fale Conosco
-          </a>
+          <div class="d-flex gap-4 align-items-center">
+            <nav class="desktop-navbar">
+              <a href="/" class="nav-link ${active === "home" ? "active" : ""}">
+                <i class="${active === "home" ? "ph-fill" : "ph"} ph-house"></i>
+                <span>Home</span>
+              </a>
+
+              <a href="/pedidos.html" class="nav-link ${active === "pedidos" ? "active" : ""}">
+                <i class="${active === "pedidos" ? "ph-fill" : "ph"} ph-hand-heart"></i>
+                <span>Pedidos</span>
+              </a>
+
+              <a href="/comunidade.html" class="nav-link ${active === "comunidade" ? "active" : ""}">
+                <i class="${active === "comunidade" ? "ph-fill" : "ph"} ph-users-three"></i>
+                <span>Comunidade</span>
+              </a>
+
+              <a href="/onde-doar.html" class="nav-link ${active === "onde-doar" ? "active" : ""}">
+                <i class="${active === "onde-doar" ? "ph-fill" : "ph"} ph-map-trifold"></i>
+                <span>Onde doar</span>
+              </a>
+            </nav>
+
+            <a class="btn header-contact-btn btn-outline" href="/contato.html">
+              <i class="ph ph-envelope-simple icon"></i>
+              Fale Conosco
+            </a>
+          </div>
         </header>
       </div>
-    `
+`
   }
 }
 
@@ -57,13 +83,13 @@ class NavBar extends HTMLElement {
 
 class PedidoDoacaoCard extends HTMLElement {
   connectedCallback() {
-    const { 
-      sanguePrincipal, 
-      paciente, 
-      precisaAte: precisaAteValue, 
-      sangues, 
-      endereco, 
-      uf, 
+    const {
+      sanguePrincipal,
+      paciente,
+      precisaAte: precisaAteValue,
+      sangues,
+      endereco,
+      uf,
       cidade,
       nivel, // urgente, medio, baixo
     } = this.dataset
@@ -176,12 +202,12 @@ class PedidoDoacaoCard extends HTMLElement {
 
 class ComunidadeDoacaoCard extends HTMLElement {
   connectedCallback() {
-    const { 
-      paciente, 
+    const {
+      paciente,
       autor,
-      sangues, 
+      sangues,
       compativel,
-      endereco, 
+      endereco,
       postadoEm,
       comentarios,
     } = this.dataset

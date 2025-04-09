@@ -237,6 +237,38 @@ a {
   padding-bottom: calc(var(--app-navbar-height) + 2rem);
 }
 
+.header .desktop-navbar {
+  display: none;
+}
+
+.header .desktop-navbar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.325rem;
+  transition: all 0.2s ease-in-out;
+  padding: 0.25rem 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.header .desktop-navbar .nav-link:hover {
+  border-bottom-color: var(--color-black-700);
+}
+
+.header .desktop-navbar .nav-link.active:hover,
+.header .desktop-navbar .nav-link.active {
+  border-bottom-color: var(--color-red-600);
+}
+
+.header .desktop-navbar .nav-link.active {
+  color: var(--color-red-600);
+  font-weight: 500;
+}
+
+.header .desktop-navbar .nav-link i {
+  font-size: 1.5rem;
+}
+
 /* App Navbar */
 .app-navbar {
   background-color: var(--color-red-600);
@@ -249,6 +281,26 @@ a {
   left: 0;
   right: 0;
   z-index: 10;
+}
+
+@media (min-width: 992px) {
+  .header .desktop-navbar {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .app-navbar {
+    display: none;
+  }
+
+  .header-contact-btn {
+  --bs-btn-border-color: var(--color-red-600);
+  --bs-btn-color: var(--color-neutral-50);
+  --bs-btn-bg: var(--color-red-600);
+  --bs-btn-hover-bg: var(--color-red-700);
+  --bs-btn-hover-color: var(--color-neutral-50);
+  }
 }
 
 .app-navbar .container {
