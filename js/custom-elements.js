@@ -56,22 +56,22 @@ class NavBar extends HTMLElement {
     this.innerHTML = `
       <div class="app-navbar">
         <nav class="container">
-          <a href="/" class="nav-link">
+          <a href="/" class="nav-link ${active === "home" ? "active" : ""}">
             <i class="${active === "home" ? "ph-fill" : "ph"} ph-house"></i>
             <span>Home</span>
           </a>
 
-          <a href="/pedidos.html" class="nav-link">
+          <a href="/pedidos.html" class="nav-link ${active === "pedidos" ? "active" : ""}">
             <i class="${active === "pedidos" ? "ph-fill" : "ph"} ph-hand-heart"></i>
             <span>Pedidos</span>
           </a>
 
-          <a href="/comunidade.html" class="nav-link">
+          <a href="/comunidade.html" class="nav-link ${active === "comunidade" ? "active" : ""}">
             <i class="${active === "comunidade" ? "ph-fill" : "ph"} ph-users-three"></i>
             <span>Comunidade</span>
           </a>
 
-          <a href="/onde-doar.html" class="nav-link">
+          <a href="/onde-doar.html" class="nav-link ${active === "onde-doar" ? "active" : ""}">
             <i class="${active === "onde-doar" ? "ph-fill" : "ph"} ph-map-trifold"></i>
             <span>Onde doar</span>
           </a>

@@ -76,6 +76,8 @@ a {
 .btn-primary {
   --bs-btn-bg: var(--color-red-600);
   --bs-btn-border-color: var(--color-red-600);
+  font-weight: 500;
+  font-size: 0.875rem;
 }
 
 .btn-outline {
@@ -322,11 +324,11 @@ a {
   }
 
   .header-contact-btn {
-  --bs-btn-border-color: var(--color-red-600);
-  --bs-btn-color: var(--color-neutral-50);
-  --bs-btn-bg: var(--color-red-600);
-  --bs-btn-hover-bg: var(--color-red-700);
-  --bs-btn-hover-color: var(--color-neutral-50);
+    --bs-btn-border-color: var(--color-red-600);
+    --bs-btn-color: var(--color-neutral-50);
+    --bs-btn-bg: var(--color-red-600);
+    --bs-btn-hover-bg: var(--color-red-700);
+    --bs-btn-hover-color: var(--color-neutral-50);
   }
 }
 
@@ -353,6 +355,10 @@ a {
   white-space: nowrap;
 }
 
+.app-navbar .nav-link.active span {
+  font-weight: 600;
+}
+
 /* Barra de pesquisa da página Pedidos */
 .pedidos__pesquisar {
   display: flex;
@@ -360,12 +366,20 @@ a {
 }
 
 .pedidos__pesquisar fieldset {
+  position: relative;
   width: 100%;
 }
 
-.pedidos__pesquisar input {
-  width: 100%;
-  padding: 6px;
-  border-radius: 5px;
-  border: 1px solid var(--color-neutral-300);
+.pedidos__pesquisar fieldset i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.75rem;
+  color: var(--color-neutral-500);
+  font-size: 1.25rem;
+  pointer-events: none;
+}
+
+.pedidos__pesquisar fieldset .form-control {
+  padding-left: calc(1.25rem + 1rem);
 }

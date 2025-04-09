@@ -1,176 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          name="description"
-          content="Pense em Doar é um aplicativo com o objetivo de conectar pessoas que precisam de doação de sangue com doadores dispostos a ajudar."
-        />
-        <meta name="theme-color" content="#FAFAFA" />
-        <link
-          rel="icon"
-          type="image/png"
-          href="/assets/favicon/favicon-96x96.png"
-          sizes="96x96"
-        />
-        <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
-        <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/assets/favicon/apple-touch-icon.png"
-        />
-        <title>Pense em doar</title>
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-          crossorigin="anonymous"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css"
-        />
-        <link rel="stylesheet" href="./css/style.css" />
-    
-        <!-- Scripts -->
-        <!-- Usar Bootstrap como Module no JS -->
-        <script defer type="importmap">
-          {
-            "imports": {
-              "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js",
-              "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.esm.min.js"
-            }
-          }
-        </script>
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-          crossorigin="anonymous"
-          defer
-        ></script>
-        <script defer src="./js/custom-elements.js"></script>
-      </head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pense em Doar é um aplicativo com o objetivo de conectar pessoas que precisam de doação de sangue com doadores dispostos a ajudar."
+    />
+    <meta name="theme-color" content="#FAFAFA" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <title>Pense em doar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Scripts -->
+    <!-- Usar Bootstrap como Module no JS -->
+    <script defer type="importmap">
+      {
+        "imports": {
+          "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js",
+          "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.esm.min.js"
+        }
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script defer src="./js/custom-elements.js"></script>
+  </head>
+  <body>
     <div class="app-container">
-        <app-header></app-header>
-  
-        <main class="d-flex app-main-container flex-column gap-5">
-          <section id="pedidos-doacao" class="d-flex container flex-column gap-4">
-            <header
-              class="d-flex justify-content-start gap-2 align-items-center"
+      <app-header></app-header>
 
-            > <voltar-btn></voltar-btn>
+      <main class="d-flex app-main-container flex-column gap-5">
+        <section id="pedidos-doacao" class="d-flex container flex-column gap-4">
+          <header class="d-flex justify-content-start gap-2 align-items-center">
+            <voltar-btn></voltar-btn>
 
-              <h2 class="h2-title">Pedidos de Doação</h2>
+            <h2 class="h2-title">Pedidos de Doação</h2>
+          </header>
 
-            </header>
+          <!--Form Pesquisa-->
 
-            <!--Form Pesquisa-->
+          <form class="pedidos__pesquisar" action="#" method="get">
+            <fieldset>
+              <i class="ph ph-magnifying-glass"></i>
+              <input
+                type="text"
+                id="pesquisar"
+                name="pesquisa"
+                placeholder="Pesquisar"
+                class="form-control"
+                aria-label="Pesquisar"
+                required
+              />
+            </fieldset>
+          </form>
 
-            <form class="pedidos__pesquisar" action="#" method="get">
-                <fieldset>
-                    <label for="pesquisar" style="display:none;">Pesquisar</label>
-                    <input type="text" id="pesquisar" name="pesquisa" placeholder="Pesquisar" required>
-                </fieldset>
-            </form>
+          <!--Cards urgentes-->
+          <header
+            class="d-flex justify-content-between gap-2 align-items-center"
+          >
+            <h2 class="h2-title">URGENTE</h2>
 
-            <!--Cards urgentes-->
-            <header
-              class="d-flex justify-content-between gap-2 align-items-center"
-            >
-              <h2 class="h2-title">URGENTE</h2>
+            <a href="/pedidos.html" class="sm-link flex-shrink-0">
+              Ver todos <i class="ph ph-caret-right"></i>
+            </a>
+          </header>
+          <div
+            id="carouselPedidosDoacaoCards"
+            data-bs-ride="carousel"
+            class="carousel slide pb-5"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselPedidosDoacaoCards"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselPedidosDoacaoCards"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselPedidosDoacaoCards"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
 
-              <a href="/pedidos.html" class="sm-link flex-shrink-0">
-                Ver todos <i class="ph ph-caret-right"></i>
-              </a>
-            </header>
-            <div
-              id="carouselPedidosDoacaoCards"
-              data-bs-ride="carousel"
-              class="carousel slide pb-5"
-            >
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselPedidosDoacaoCards"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselPedidosDoacaoCards"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselPedidosDoacaoCards"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <pedido-doacao-card
+                  data-sangue-principal="O+"
+                  data-paciente="Galinha Pintadinha"
+                  data-endereco="Hospital Santa Clara"
+                  data-uf="PB"
+                  data-cidade="Campina Grande"
+                  data-precisa-ate="10/04/2025"
+                  data-sangues="O+, A+, AB, O-, A-"
+                  data-nivel="urgente"
+                ></pedido-doacao-card>
               </div>
-  
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <pedido-doacao-card
-                    data-sangue-principal="O+"
-                    data-paciente="Galinha Pintadinha"
-                    data-endereco="Hospital Santa Clara"
-                    data-uf="PB"
-                    data-cidade="Campina Grande"
-                    data-precisa-ate="10/04/2025"
-                    data-sangues="O+, A+, AB, O-, A-"
-                    data-nivel="urgente"
-                  ></pedido-doacao-card>
-                </div>
-                <div class="carousel-item">
-                  <pedido-doacao-card
-                    data-sangue-principal="B-"
-                    data-paciente="João das Neves"
-                    data-endereco="Hospital Muralha"
-                    data-uf="PB"
-                    data-cidade="João Pessoa"
-                    data-sangues="AB, O-"
-                    data-nivel="urgente"
-                  ></pedido-doacao-card>
-                </div>
-                <div class="carousel-item">
-                  <pedido-doacao-card
-                    data-sangue-principal="A+"
-                    data-paciente="Conde Drácula"
-                    data-endereco="Hospital Santa Clara"
-                    data-uf="PB"
-                    data-cidade="Campina Grande"
-                    data-precisa-ate="10/04/2025"
-                    data-sangues="O+, O-, A+"
-                    data-nivel="urgente"
-                  ></pedido-doacao-card>
-                </div>
+              <div class="carousel-item">
+                <pedido-doacao-card
+                  data-sangue-principal="B-"
+                  data-paciente="João das Neves"
+                  data-endereco="Hospital Muralha"
+                  data-uf="PB"
+                  data-cidade="João Pessoa"
+                  data-sangues="AB, O-"
+                  data-nivel="urgente"
+                ></pedido-doacao-card>
+              </div>
+              <div class="carousel-item">
+                <pedido-doacao-card
+                  data-sangue-principal="A+"
+                  data-paciente="Conde Drácula"
+                  data-endereco="Hospital Santa Clara"
+                  data-uf="PB"
+                  data-cidade="Campina Grande"
+                  data-precisa-ate="10/04/2025"
+                  data-sangues="O+, O-, A+"
+                  data-nivel="urgente"
+                ></pedido-doacao-card>
               </div>
             </div>
-            <!--Fim Cards urgentes-->
+          </div>
+          <!--Fim Cards urgentes-->
 
-            <!--Cards prioridade média-->
-            <header
-              class="d-flex justify-content-between gap-2 align-items-center"
-            >
-              <h2 class="h2-title">Prioridade Média</h2>
+          <!--Cards prioridade média-->
+          <header
+            class="d-flex justify-content-between gap-2 align-items-center"
+          >
+            <h2 class="h2-title">Prioridade Média</h2>
 
-              <a href="/pedidos.html" class="sm-link flex-shrink-0">
-                Ver todos <i class="ph ph-caret-right"></i>
-              </a>
-            </header>
-            <div
+            <a href="/pedidos.html" class="sm-link flex-shrink-0">
+              Ver todos <i class="ph ph-caret-right"></i>
+            </a>
+          </header>
+          <div
             id="carouselPedidosDoacaoCards"
             data-bs-ride="carousel"
             class="carousel slide pb-5"
@@ -240,86 +245,85 @@
 
           <!--Cards prioridade baixa-->
           <header
-          class="d-flex justify-content-between gap-2 align-items-center"
-        >
-          <h2 class="h2-title">Prioridade Baixa</h2>
+            class="d-flex justify-content-between gap-2 align-items-center"
+          >
+            <h2 class="h2-title">Prioridade Baixa</h2>
 
-          <a href="/pedidos.html" class="sm-link flex-shrink-0">
-            Ver todos <i class="ph ph-caret-right"></i>
-          </a>
-        </header>
+            <a href="/pedidos.html" class="sm-link flex-shrink-0">
+              Ver todos <i class="ph ph-caret-right"></i>
+            </a>
+          </header>
           <div
-          id="carouselPedidosDoacaoCards"
-          data-bs-ride="carousel"
-          class="carousel slide pb-5"
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselPedidosDoacaoCards"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselPedidosDoacaoCards"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselPedidosDoacaoCards"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-          </div>
+            id="carouselPedidosDoacaoCards"
+            data-bs-ride="carousel"
+            class="carousel slide pb-5"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselPedidosDoacaoCards"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselPedidosDoacaoCards"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselPedidosDoacaoCards"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
 
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <pedido-doacao-card
-                data-sangue-principal="O-"
-                data-paciente="Killandio"
-                data-endereco="Hospital Antônio Targino"
-                data-uf="PB"
-                data-cidade="Campina Grande"
-                data-precisa-ate="20/04/2025"
-                data-sangues="O+, A+, AB, O-, A-"
-                data-nivel="baixo"
-              ></pedido-doacao-card>
-            </div>
-            <div class="carousel-item">
-              <pedido-doacao-card
-                data-sangue-principal="O+"
-                data-paciente="Daenerys"
-                data-endereco="Pedra do Dragão"
-                data-uf="PB"
-                data-cidade="Campina Grande"
-                data-sangues="AB, O-"
-                data-nivel="baixo"
-              ></pedido-doacao-card>
-            </div>
-            <div class="carousel-item">
-              <pedido-doacao-card
-                data-sangue-principal="AB"
-                data-paciente="Maria da Silva"
-                data-endereco="UPA Dinamerica"
-                data-uf="PB"
-                data-cidade="Campina Grande"
-                data-precisa-ate="10/04/2025"
-                data-sangues="O+, O-, A+"
-                data-nivel="baixo"
-              ></pedido-doacao-card>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <pedido-doacao-card
+                  data-sangue-principal="O-"
+                  data-paciente="Killandio"
+                  data-endereco="Hospital Antônio Targino"
+                  data-uf="PB"
+                  data-cidade="Campina Grande"
+                  data-precisa-ate="20/04/2025"
+                  data-sangues="O+, A+, AB, O-, A-"
+                  data-nivel="baixo"
+                ></pedido-doacao-card>
+              </div>
+              <div class="carousel-item">
+                <pedido-doacao-card
+                  data-sangue-principal="O+"
+                  data-paciente="Daenerys"
+                  data-endereco="Pedra do Dragão"
+                  data-uf="PB"
+                  data-cidade="Campina Grande"
+                  data-sangues="AB, O-"
+                  data-nivel="baixo"
+                ></pedido-doacao-card>
+              </div>
+              <div class="carousel-item">
+                <pedido-doacao-card
+                  data-sangue-principal="AB"
+                  data-paciente="Maria da Silva"
+                  data-endereco="UPA Dinamerica"
+                  data-uf="PB"
+                  data-cidade="Campina Grande"
+                  data-precisa-ate="10/04/2025"
+                  data-sangues="O+, O-, A+"
+                  data-nivel="baixo"
+                ></pedido-doacao-card>
+              </div>
             </div>
           </div>
-        </div>
-        <!--Fim Cards prioridade baixa-->
-        
-          </section>
-        </main>
-  
-        <app-navbar data-active="pedidos"></app-navbar>
-      </div>
-</body>
+          <!--Fim Cards prioridade baixa-->
+        </section>
+      </main>
+
+      <app-navbar data-active="pedidos"></app-navbar>
+    </div>
+  </body>
 </html>
