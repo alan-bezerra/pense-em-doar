@@ -359,7 +359,7 @@ a {
   font-weight: 600;
 }
 
-/* Barra de pesquisa da página Pedidos */
+/* Barra de pesquisa */
 .pedidos__pesquisar {
   display: flex;
   justify-content: center;

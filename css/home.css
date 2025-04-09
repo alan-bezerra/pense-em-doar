@@ -1,0 +1,117 @@
+/* Seção Quem pode doar */
+.quem-pode-doar-container {
+  background-color: var(--color-neutral-100);
+  padding: 2rem 0;
+}
+
+.quem-pode-doar-container .h2-title {
+  text-align: center;
+  width: 100%;
+}
+
+.quem-pode-doar-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-neutral-800);
+  font-size: 0.875rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.quem-pode-doar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.quem-pode-doar-item i {
+  color: var(--color-red-600);
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+/* Seção Hemocentros */
+.locale-card {
+  display: flex;
+  position: relative;
+  min-height: 15.625rem;
+}
+
+.locale-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.locale-card .card-map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.locale-card:hover .card-map {
+  transform: scale(1.05);
+}
+
+.locale-card .card-body {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.25rem 1rem;
+  margin-top: auto;
+  z-index: 1;
+}
+
+.locale-card .card-img-wrapper {
+  flex: 1 1 4rem;
+  max-width: 5.375rem;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  border: 1px solid var(--color-neutral-300);
+}
+
+.locale-card .card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.locale-card .card-texts {
+  flex: 1 1 13.75rem;
+  color: var(--color-neutral-50);
+  overflow: hidden;
+}
+
+.locale-card .card-title {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.375rem;
+}
+
+.locale-card .card-location {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+
+.locale-card .card-address {
+  margin: 0;
+  margin-top: 0.375rem;
+  color: var(--color-neutral-200);
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+}

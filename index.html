@@ -39,6 +39,7 @@
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/home.css" />
 
     <!-- Scripts -->
     <!-- Usar Bootstrap como Module no JS -->
@@ -137,6 +138,162 @@
                   data-sangues="O+, O-, A+"
                   data-nivel="baixo"
                 ></pedido-doacao-card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="quem-pode-doar-container">
+          <section class="d-flex container flex-column gap-4">
+            <header
+              class="d-flex justify-content-between gap-2 align-items-center"
+            >
+              <h2 class="h2-title">Quem pode doar?</h2>
+            </header>
+
+            <div class="pedido-card card">
+              <div class="card-body">
+                <ul class="quem-pode-doar-list">
+                  <li class="quem-pode-doar-item">
+                    <i class="ph ph-check-fat"></i>
+                    Ter entre 16 a 69 anos (menores de 18 anos precisam de
+                    autorização)
+                  </li>
+                  <li class="quem-pode-doar-item">
+                    <i class="ph ph-check-fat"></i>
+                    Pesar mais de 50 kg
+                  </li>
+                  <li class="quem-pode-doar-item">
+                    <i class="ph ph-check-fat"></i>
+                    Estar em boa saúde (sem doenças crônicas ou infecções
+                    ativas)
+                  </li>
+                  <li class="quem-pode-doar-item">
+                    <i class="ph ph-check-fat"></i>
+                    Dormir pelo menos 6 horas na noite anterior à doação.
+                  </li>
+                  <li class="quem-pode-doar-item">
+                    <i class="ph ph-check-fat"></i>
+                    Não ingerir bebidas alcoólicas nas ultimas 12 horas
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="d-flex flex-column gap-4">
+          <header
+            class="d-flex container justify-content-between gap-2 align-items-center"
+          >
+            <h2 class="h2-title">Hemocentros</h2>
+
+            <a href="/onde-doar.html" class="sm-link flex-shrink-0">
+              Ver todos <i class="ph ph-caret-right"></i>
+            </a>
+          </header>
+
+          <div
+            id="carouselOndeDoar"
+            data-bs-ride="carousel"
+            class="carousel slide pb-5"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselOndeDoar"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselOndeDoar"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a
+                  target="_blank"
+                  href="https://maps.app.goo.gl/NbgQ8hH26AEBrcry8"
+                  class="locale-card"
+                >
+                  <img
+                    src="./assets/imgs/mapa-hemocentro-cg.png"
+                    alt="Mapa do Hemocentro de Campina Grande"
+                    loading="lazy"
+                    class="card-map"
+                  />
+
+                  <section class="card-body container">
+                    <div class="card-img-wrapper">
+                      <img
+                        src="./assets/imgs/hemocentro-cg.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div class="card-texts">
+                      <h6 class="card-title">Hemocentro CG</h6>
+
+                      <p class="card-location">
+                        <span class="text-truncate"
+                          >Rua Eutécia Vital Ribeiro, s/nº - Catolé</span
+                        >
+                        <span class="text-truncate">Campina Grande - PB</span>
+                      </p>
+
+                      <p class="text-truncate card-address">
+                        (83) 3310-7173 | diretoria-hrcg@hotmail.com
+                      </p>
+                    </div>
+                  </section>
+                </a>
+              </div>
+
+              <div class="carousel-item">
+                <a
+                  target="_blank"
+                  href="https://maps.app.goo.gl/oKNSvGi3uy5qEvdy7"
+                  class="locale-card"
+                >
+                  <img
+                    src="./assets/imgs/mapa-hemocentro-pb.png"
+                    alt="Mapa do Hemocentro da Paraíba"
+                    loading="lazy"
+                    class="card-map"
+                  />
+
+                  <section class="card-body container">
+                    <div class="card-img-wrapper">
+                      <img
+                        src="./assets/imgs/hemocentro-pb.png"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div class="card-texts">
+                      <h6 class="card-title">Hemocentro da Paraíba</h6>
+
+                      <p class="card-location">
+                        <span class="text-truncate"
+                          >Av. D. Pedro II, nº 1826 - Torre</span
+                        >
+                        <span class="text-truncate">João Pessoa - PB</span>
+                      </p>
+
+                      <p class="card-address text-truncate">
+                        (83) 93133-3463 | hemocentrodaparaiba@yahoo.com.br
+                      </p>
+                    </div>
+                  </section>
+                </a>
               </div>
             </div>
           </div>
