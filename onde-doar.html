@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pense em Doar é um aplicativo com o objetivo de conectar pessoas que precisam de doação de sangue com doadores dispostos a ajudar."
+    />
+    <meta name="theme-color" content="#FAFAFA" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <title>Pense em doar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Scripts -->
+    <!-- Usar Bootstrap como Module no JS -->
+    <script defer type="importmap">
+      {
+        "imports": {
+          "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js",
+          "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.esm.min.js"
+        }
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script defer src="./js/custom-elements.js"></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <app-header></app-header>
+
+      <main class="d-flex app-main-container flex-column gap-5">
+        <section id="pedidos-doacao" class="d-flex container flex-column gap-4">
+          <header class="d-flex justify-content-start gap-2 align-items-center">
+            <voltar-btn></voltar-btn>
+
+            <h2 class="h2-title">Onde Doar?</h2>
+          </header>
+
+        <div>
+            <p>Sua doação pode ser feita através dos hemocentros e hemonúcleos de sua cidade.</p>
+        </div>
+
+          <!--Form Pesquisa-->
+
+          <form class="pedidos__pesquisar" action="#" method="get">
+            <fieldset>
+              <i class="ph ph-magnifying-glass"></i>
+              <input
+                type="text"
+                id="pesquisar"
+                name="pesquisa"
+                placeholder="Pesquisar"
+                class="form-control"
+                aria-label="Pesquisar"
+                required
+              />
+            </fieldset>
+          </form>
+
+          <!--Fim pesquisa-->
+
+          <div>
+            <h3>Hemocentros</h3>
+          </div>
+
+          <!--Cards com endereço dos hemocentros-->
+          <div>
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="/assets/imgs/hemocentrocg.png" class="img-fluid rounded-start" alt="Hemocentro Campina Grande">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">HEMOCENTRO REGIONAL DE CG</h5>
+                      <p class="card-text">Rua Eutécia Vital Ribeiro, s/nº - Catolé<br>Campina Grande - PB<br>(83) 3310-7173 / 7140 / 7130 / 7141<br>diretoria-hrcg@hotmail.com</p>
+                      <p class="card-text"><small class="text-body-secondary"></small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="/assets/imgs/hemocentrojp.png" class="img-fluid rounded-start" alt="Hemocentro João Pessoa">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">HEMOCENTRO da Paraíba</h5>
+                      <p class="card-text">Av. D. Pedro II, nº 1826 - Torre<br>João Pessoa - PB<br>(83) 93133-3463<br>hemocentrodaparaiba@yahoo.com.br</p>
+                      <p class="card-text"><small class="text-body-secondary"></small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+          <!--Fim Cards com endereço dos hemocentros-->
+
+          <div>
+            <h3>Hemonúcleos</h3>
+          </div>
+
+          <!--Cards com endereço dos hemonucleos-->
+          <div>
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="/assets/imgs/gota.png" class="img-fluid rounded-start" alt="Hemonúcleo de Patos">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">HEMONÚCLEO DE PATOS</h5>
+                      <p class="card-text">Rua 05 de Agosto, s/nº - Bela Vista<br>Patos - PB<br>(83) 93423-2180 / 99930-4850<br>hemonucleodepatos@hotmail.com</p>
+                      <p class="card-text"><small class="text-body-secondary"></small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="/assets/imgs/gota.png" class="img-fluid rounded-start" alt="Hemonúcleo de Cajazeiras">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">HEMONÚCLEO DE CAJAZEIRAS</h5>
+                      <p class="card-text">Rua José Rodovalho de Alencar s/nº - Centro<br>Cajazeiras - PB<br>(83) 93531-6687 / 99364-8116<br>hemcajpb@hotmail.com</p>
+                      <p class="card-text"><small class="text-body-secondary"></small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+
+          <!--Fim cards com endereço dos hemonucleos-->
+      
+
+      <app-navbar data-active="onde-doar"></app-navbar>
+    </div>
+  </body>
+</html>
