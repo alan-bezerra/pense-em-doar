@@ -65,50 +65,119 @@
 
       <main class="d-flex app-main-container flex-column gap-5">
         <section id="pedidos-doacao" class="d-flex container flex-column gap-4">
+          <!--Banner-->
 
-                <!--Banner-->
+          <div
+            id="carouselBannerPosts"
+            data-bs-ride="carousel"
+            data-bs-interval="7000"
+            class="carousel slide carousel__banner"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselBannerPosts"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselBannerPosts"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselBannerPosts"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
 
-      <div id="carouselExampleCaptions" class="carousel slide carousel__banner">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="/assets/imgs/doacao.png" class="d-block w-100" alt="Homem com a bolinha na mão">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Você sabia?</h5>
-              <p>O Sangue após doado passa por análises e testes para grantir maior segurança aos pacientes.</p>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="banner__post__wrapper">
+                  <img
+                    src="/assets/imgs/doacao.png"
+                    class="d-block w-100"
+                    alt="Homem com a bolinha na mão"
+                  />
+
+                  <div class="carousel-caption">
+                    <header class="carousel-caption__header">
+                      <h5>Você sabia?</h5>
+                      <span class="carousel-caption__header__data">
+                        <i class="ph-fill ph-globe-hemisphere-west"></i>
+                        2 dias
+                      </span>
+                    </header>
+
+                    <p>
+                      O Sangue após doado passa por análises e testes para
+                      grantir maior segurança aos pacientes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="banner__post__wrapper">
+                  <img
+                    src="/assets/imgs/doacao2.png"
+                    class="d-block w-100"
+                    alt="Dia nacional do doador de sangue"
+                  />
+
+                  <div class="carousel-caption">
+                    <header class="carousel-caption__header">
+                      <h5 class="text-truncate">
+                        Terça-feira, 25 de novembro de 2025
+                      </h5>
+                      <span class="carousel-caption__header__data">
+                        <i class="ph-fill ph-globe-hemisphere-west"></i>
+                        3 dias
+                      </span>
+                    </header>
+
+                    <p>
+                      Celebramos quem salva vidas com um simples gesto de amor.
+                      Doe sangue, compartilhe vida. Obrigado a todos os heróis
+                      anônimos que fazem a diferença!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="banner__post__wrapper">
+                  <img
+                    src="/assets/imgs/doacao3.png"
+                    class="d-block w-100"
+                    alt="Policial doando"
+                  />
+
+                  <div class="carousel-caption">
+                    <header class="carousel-caption__header">
+                      <h5 class="text-truncate">Doe sangue, salve vidas!</h5>
+                      <span class="carousel-caption__header__data">
+                        <i class="ph-fill ph-globe-hemisphere-west"></i>
+                        6 dias
+                      </span>
+                    </header>
+
+                    <p>
+                      Um gesto simples, um impacto enorme. Seja a esperança de
+                      alguém. Seja um herói hoje!
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src="/assets/imgs/doacao2.png" class="d-block w-100" alt="Dia nacional do doador de sangue">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>terça-feira, 25 de novembro de 2025</h5>
-              <p>Celebramos quem salva vidas com um simples gesto de amor. Doe sangue, compartilhe vida.
-                Obrigado a todos os heróis anônimos que fazem a diferença! </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="assets/imgs/doacao3.png" class="d-block w-100" alt="Policial doando">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Doe sangue, salve vidas!</h5>
-              <p>Um gesto simples, um impacto enorme. Seja a esperança de alguém. Seja um herói hoje! </p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
 
-      <!--Fim Banner-->
+          <!--Fim Banner-->
 
           <header
             class="d-flex justify-content-between gap-2 align-items-center"
@@ -344,69 +413,133 @@
           </div>
         </section>
 
-        
-    <!--Depoimentos-->
-  
-    <div id="carouselExampleIndicators" class="carousel slide carousel__depoimentos">
-      
-      <div class="carousel__depoimentos__titulo">
-        <h3>Depoimentos</h3>
-      </div>
+        <!--Depoimentos-->
 
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="carousel__depoimentos__conteudo">
-            <div class="carousel__depoimentos__conteudo__foto">
-              <img src="/assets/imgs/Daenerys.png" class="d-block w-100" alt="Daenerys">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide carousel__depoimentos"
+        >
+          <div class="carousel__depoimentos__titulo">
+            <h3>Depoimentos</h3>
+          </div>
+
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carousel__depoimentos__conteudo">
+                <div class="carousel__depoimentos__conteudo__foto">
+                  <img
+                    src="/assets/imgs/Daenerys.png"
+                    class="d-block w-100"
+                    alt="Daenerys"
+                  />
+                </div>
+                <div class="carousel__depoimentos__conteudo__texto">
+                  <p>
+                    "Eu sou Daenerys Tempestade de Areia, da Casa Targaryen, a
+                    Primeira de Seu Nome, Rainha dos Ândalos, dos Roinares e dos
+                    Primeiros Homens, Senhora dos Sete Reinos e Protetora do
+                    Reino, Khaleesi do Grande Mar de Grama, a Não Queimada, Mãe
+                    de Dragões, Quebradora de Correntes."
+                  </p>
+                  <br />
+                  <p class="carousel__depoimentos__conteudo__texto__autor">
+                    Daenerys Targeryen
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="carousel__depoimentos__conteudo__texto">
-              <p>"Eu sou Daenerys Tempestade de Areia, da Casa Targaryen, a Primeira de Seu Nome, Rainha dos Ândalos, dos Roinares e dos Primeiros Homens, Senhora dos Sete Reinos e Protetora do Reino, Khaleesi do Grande Mar de Grama, a Não Queimada, Mãe de Dragões, Quebradora de Correntes."</p><br>
-              <p class="carousel__depoimentos__conteudo__texto__autor">Daenerys Targeryen</p>
+            <div class="carousel-item">
+              <div class="carousel__depoimentos__conteudo">
+                <div class="carousel__depoimentos__conteudo__foto">
+                  <img
+                    src="/assets/imgs/jon.png"
+                    class="d-block w-100"
+                    alt="Jon"
+                  />
+                </div>
+                <div class="carousel__depoimentos__conteudo__texto">
+                  <p>
+                    "Eu sou Jon Snow, da Patrulha da Noite, Protetor dos Reinos
+                    dos Homens, Bastardo de Winterfell e verdadeiro herdeiro do
+                    Trono de Ferro. Doei sangue para salvar vidas, assim como
+                    lutei contra os mortos. Senti honra, coragem e propósito.
+                    Recomendo a todos: doem sangue. Um gesto simples."
+                  </p>
+                  <br />
+                  <p class="carousel__depoimentos__conteudo__texto__autor">
+                    Jon Snow
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>  
-        </div>
-        <div class="carousel-item">
-          <div class="carousel__depoimentos__conteudo">
-            <div class="carousel__depoimentos__conteudo__foto">
-              <img src="/assets/imgs/jon.png" class="d-block w-100" alt="Jon">
-            </div>
-            <div class="carousel__depoimentos__conteudo__texto">
-              <p>"Eu sou Jon Snow, da Patrulha da Noite, Protetor dos Reinos dos Homens, Bastardo de Winterfell e verdadeiro herdeiro do Trono de Ferro. Doei sangue para salvar vidas, assim como lutei contra os mortos. Senti honra, coragem e propósito. Recomendo a todos: doem sangue. Um gesto simples."</p><br>
-              <p class="carousel__depoimentos__conteudo__texto__autor">Jon Snow</p>
+            <div class="carousel-item">
+              <div class="carousel__depoimentos__conteudo">
+                <div class="carousel__depoimentos__conteudo__foto">
+                  <img
+                    src="/assets/imgs/drogon.png"
+                    class="d-block w-100"
+                    alt="box3"
+                  />
+                </div>
+                <div class="carousel__depoimentos__conteudo__texto">
+                  <p>
+                    "Eu sou Drogon, filho de fogo e tempestade, nascido das
+                    chamas e forjado para voar acima dos céus de Essos e
+                    Westeros. Doar sangue me faz sentir vivo, como nas batalhas
+                    ao lado de minha mãe. É um ato de força e generosidade. Se
+                    até um dragão pode doar, por que você não? Doe e ajude."
+                  </p>
+                  <br />
+                  <p class="carousel__depoimentos__conteudo__texto__autor">
+                    Drogon
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <div class="carousel-item">
-          <div class="carousel__depoimentos__conteudo">
-            <div class="carousel__depoimentos__conteudo__foto">
-              <img src="/assets/imgs/drogon.png" class="d-block w-100" alt="box3">
-            </div>
-            <div class="carousel__depoimentos__conteudo__texto">
-              <p>"Eu sou Drogon, filho de fogo e tempestade, nascido das chamas e forjado para voar acima dos céus de Essos e Westeros. Doar sangue me faz sentir vivo, como nas batalhas ao lado de minha mãe. É um ato de força e generosidade. Se até um dragão pode doar, por que você não? Doe e ajude."</p><br>
-              <p class="carousel__depoimentos__conteudo__texto__autor">Drogon</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
 
-    <!--Fim Depoimentos-->
-
-
-
+        <!--Fim Depoimentos-->
       </main>
 
       <app-navbar data-active="home"></app-navbar>
