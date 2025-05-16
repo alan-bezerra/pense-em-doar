@@ -182,7 +182,8 @@ a {
   margin-bottom: 0.375rem;
 }
 
-.form-control {
+.form-control,
+.form-select {
   --bs-border-radius: 0.25rem;
   --bs-border-color: var(--color-neutral-300);
   padding: 0.625rem 0.875rem;
@@ -194,7 +195,8 @@ a {
   color: var(--color-neutral-500);
 }
 
-.form-control:focus {
+.form-control:focus,
+.form-select:focus {
   border-color: var(--color-red-600);
   box-shadow: 0 0 0 .125rem var(--color-red-300);
 }

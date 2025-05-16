@@ -17,6 +17,8 @@ contatoMensagemField.addEventListener("input", onInputChange);
 const isEmpty = (value) => value.trim().length === 0;
 const isValidEmail = (email) => email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);
 
+const validAssuntos = ['duvida', 'elogio', 'sugestao', 'parceria', 'outros'];
+
 function onContactSubmit(e) {
   e.preventDefault();
 
@@ -51,12 +53,12 @@ function onContactSubmit(e) {
     addInputError(contatoEmailField, errors.email.message);
   }
 
-  if (isEmpty(data.assunto)) {
+  if (!validAssuntos.includes(data.assunto)) {
     errors.assunto = {
-      message: "O campo assunto é obrigatório",
+      message: "Escolha um assunto válido",
       element: contatoAssuntoField,
     }
-    addInputError(contatoAssuntoField);
+    addInputError(contatoAssuntoField, errors.assunto.message);
   }
 
   if (isEmpty(data.mensagem)) {
@@ -76,6 +78,10 @@ function onContactSubmit(e) {
 
   [contatoNomeField, contatoEmailField, contatoAssuntoField, contatoMensagemField].forEach((field) => {
     field.value = "";
+
+    if (field.id === "assunto") {
+      field.value = "default";
+    }
     removeInputError(field);
   });
 
